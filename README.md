@@ -22,5 +22,8 @@
 - Foundation Framework
 - PokeAPI
 - Font Awesome APIs *
+- Google Fonts API *
+- Google Translation API *
+
 
 ## Deployment
