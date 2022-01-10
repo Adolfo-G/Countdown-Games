@@ -2,14 +2,18 @@ body {
     margin: 0;
     background-color: #000;
     color: #fff;
+    margin: auto;
+    width: 50%;
+    padding: 10px;
   }
   
   main {
     position: relative;
-    width: 575px;
+    width: 600px;
     background-image: url('https://res.cloudinary.com/dzynqn10l/image/upload/v1633196203/Msc/pokemon-bg_ig4uv3.jpg');
     background-size: 110%;
     background-repeat: no-repeat;
+    border-radius: 10px;
   }
   
   #pokemon-container {
