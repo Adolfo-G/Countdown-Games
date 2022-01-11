@@ -1,5 +1,8 @@
 # Team Swift Wolves
-# Example name: Who’s who? Pokemon Edition. 
+# Project Title: Pokemon Game Center.
+
+## Project Description: 
+- Pokemon based guessing game featuring Guess Who and hangman. This game will feature 151 Pokemon characters.
 
 ## The Task for Project 1:
 
@@ -20,6 +23,8 @@
 - CSS
 - JavaScript
 - Foundation Framework
+
+## APIs:
 - PokeAPI
 - Font Awesome APIs *
 - Google Fonts API *
