@@ -1,7 +1,6 @@
 body {
-    margin: 0;
-    background-color: #000;
-    color: #fff;
+    background-color: rgb(151, 215, 231);
+    color: rgb(224, 84, 84);
     margin: auto;
     width: 50%;
     padding: 10px;
@@ -29,7 +28,7 @@ body {
     position: absolute;
     background-color: #dd1716;
     right: 25px;
-    width: 170px;
+    width: 200px;
     height: 170px;
     top: 60px;
     border-radius: 50%;
