@@ -5,7 +5,6 @@ const textOverlay = document.querySelector('#text-overlay');
 const choices = document.querySelector('#choices');
 const playBtn = document.querySelector('#play');
 playBtn.addEventListener('click', fetchData);
-loadVoice();
 addAnswerHandler();
 
 
@@ -18,12 +17,12 @@ async function fetchData() {
 
 function resetImage() {
   pokemonImage.src = 'data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs%3D';
-  main.classList.add('fetching');
+  main.classList.add('pokemon-guessing-game');
   main.classList.remove('revealed');
 }
 
 function showSilhouette() {
-  main.classList.remove('fetching');
+  main.classList.remove('pokemon-guessing-game');
   pokemonImage.src = gameData.correct.image;
 }
 
@@ -44,7 +43,6 @@ function addAnswerHandler() {
 
     e.target.classList.add(resultClass);
     revealPokemon();
-    speakAnswer();
   });
 }
 
@@ -53,16 +51,3 @@ function revealPokemon() {
   textOverlay.textContent = `${gameData.correct.name}!`;
 }
 
-function loadVoice() {
-  window.speechSynthesis.onvoiceschanged = () => {
-    window.femaleVoice = speechSynthesis.getVoices()[4];
-  };
-}
-
-function speakAnswer() {
-  const utterance = new SpeechSynthesisUtterance(gameData.correct.name);
-  utterance.voice = window.femaleVoice;
-  utterance.pitch = 0.9;
-  utterance.rate = 0.85;
-  speechSynthesis.speak(utterance);
-}
