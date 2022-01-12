@@ -63,6 +63,7 @@ body {
     font-weight: 600;
     font-size: 14px;
     padding: 10px 36px;
+    margin: 10px;
     border-radius: 8px;
     text-transform: uppercase;
     box-shadow: 0px 4px 10px 1px;
@@ -112,16 +113,16 @@ body {
     left: 0;
   }
   
-  main.fetching #pokeball {
+  main.pokemon-guessing-game #pokeball {
     visibility: visible;
   }
   
-  main.fetching #pokemon-image {
+  main.pokemon-guessing-game #pokemon-image {
     visibility: hidden;
     display: none;
   }
   
-  main.fetching #choices {
+  main.pokemon-guessing-game #choices {
     display: none;
   }
   
@@ -136,7 +137,7 @@ body {
   #choices {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 12px;
+    grid-gap: 20px;
   }
   
   @keyframes wiggle {
