@@ -7,6 +7,26 @@ const playBtn = document.querySelector('#play');
 playBtn.addEventListener('click', fetchData);
 addAnswerHandler();
 
+//Start menu
+var startBtn = document.getElementById("start");
+
+function startQuiz() {
+  // hide start menu
+  var startScreenEl = document.getElementById("start-menu");
+  startScreenEl.setAttribute("class", "hide");
+
+  // un-hide questions section
+  questionsEl.removeAttribute("class");
+
+  // start timer
+  timerId = setInterval(clockTick, 1000);
+
+  // show starting time
+  timerEl.textContent = time;
+
+  getQuestion();
+}
+
 
 async function fetchData() {
   resetImage();
@@ -50,4 +70,3 @@ function revealPokemon() {
   main.classList.add('revealed');
   textOverlay.textContent = `${gameData.correct.name}!`;
 }
-

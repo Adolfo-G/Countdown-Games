@@ -5,20 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Highscores</title>
-
-    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+    <link rel="stylesheet" href="/assets/css/styles.css" />
   </head>
-=== 0 =>
-<Q></Q>
-  <body>
-    <div class="wrapper">
-      <h1>Highscores</h1>
-      <ol id="highscores"></ol>
 
-      <a href="index.html"><button>Go Back</button></a>
-      <button id="clear">Clear Highscores</button>
+
+  <body>
+    <div class="row">
+
+      <div class="columns small-6 small-centered text-center">
+        <h1>Highscores</h1>
+        <ol id="highscores"></ol>
+  
+        <a class="primary button" href="index.html"><button>Go Back</button></a>
+        <button class="alert button" id="clear">Clear Highscores</button>
+      </div>
+      
     </div>
 
-    <script src="./assets/js/scores.js"></script>
+ 
+
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+    <script>$(document).foundation();</script>
+    <script src="/assets/js/scores.js"></script>
   </body>
 </html>
