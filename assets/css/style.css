@@ -1,3 +1,20 @@
+
+.hide {
+  display: none;
+}
+
+.timer {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+a {
+  color: rgb(224, 84, 84);
+  text-decoration: none;
+  transition: color 0.1s;
+}
+
 body {
     background-color: rgb(151, 215, 231);
     color: rgb(224, 84, 84);
@@ -147,3 +164,5 @@ body {
     95% { transform: rotate(-6deg); }
     100% { transform: rotate(0deg); }
   }
+
+  

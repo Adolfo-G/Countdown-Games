@@ -6,41 +6,54 @@
     <title>Countdown: Pokemon Edition</title>
     <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" /> 
   </head>
   <body>
 
-    <!-- <div class="scores"><a href="highscores.html">View Highscores</a></div>
+    <div class="row">
+      <div class="scores"><a href="highscores.html">View Highscores</a></div>
 
-    <div class="timer">Time: <span id="time">0</span></div> -->
+    <div class="timer">Time: <span id="time">0</span></div> 
 
-    <div class="start-menu"></div>
+    <div id="start-menu" class="columns small-6 small-centered text-center start">
+      <h1>Pokemon: Guess Who?</h1>
+        <p>
+          Guess who is the Pokemon within 10 seconds!
+        </p>
 
-    <main class="pokemon-guessing-game">
+        <div class="small button-group small-6 small-centered text-center columns">
+          <a class="success button">Easy</a>
+          <a id="start" class="primary button">Normal</a>
+          <a class="alert button">Hard</a>
+        </div>
+    </div>
 
-      <div id="pokemon-container">
+    <main class="pokemon-guessing-game" class="hide">
+
+      <div id="pokemon-container" class="hide">
         <img id="pokeball" src="https://res.cloudinary.com/dzynqn10l/image/upload/v1633196610/Msc/pokeball_zeoqii.webp">
         <img id="pokemon-image" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs%3D">
       </div>
   
-      <div id="answer">
+      <div id="answer" class="hide">
         <div id="bg-overlay"></div>
         <div id="text-overlay"></div>
       </div>
   
-      <section id="controls">
+      <section id="controls" class="hide">
         <button id="play">Play</button>
         <div id="choices"></div>
       </section>
     </main>
 
-    <div class="end-menu"></div>
+    <div class="end-menu" class="hide"></div>
+    </div>
+
+    
 
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
-    <script>
-      $(document).foundation();
-    </script>
+    <script>$(document).foundation();</script>
     <script src="./assets/js/index.js"></script>
     <script src="./assets/js/api.js"></script>
   </body>
