@@ -5,7 +5,6 @@ const textOverlay = document.querySelector('#text-overlay');
 const choices = document.querySelector('#choices');
 const playBtn = document.querySelector('#play');
 playBtn.addEventListener('click', fetchData);
-loadVoice();
 addAnswerHandler();
 
 
@@ -16,16 +15,7 @@ async function fetchData() {
   displayChoices();
 }
 
-function resetImage() {
-  pokemonImage.src = 'data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs%3D';
-  main.classList.add('fetching');
-  main.classList.remove('revealed');
-}
 
-function showSilhouette() {
-  main.classList.remove('fetching');
-  pokemonImage.src = gameData.correct.image;
-}
 
 function displayChoices() {
   const { pokemonChoices } = gameData;
@@ -38,13 +28,14 @@ function displayChoices() {
 
 function addAnswerHandler() {
   choices.addEventListener('click', e => {
+    e.preventDefault()
     const { name } = e.target.dataset;
+    console.log("name", name)
     const resultClass = (name === gameData.correct.name) ?
       'correct' : 'incorrect';
 
     e.target.classList.add(resultClass);
     revealPokemon();
-    speakAnswer();
   });
 }
 
@@ -53,16 +44,18 @@ function revealPokemon() {
   textOverlay.textContent = `${gameData.correct.name}!`;
 }
 
-function loadVoice() {
-  window.speechSynthesis.onvoiceschanged = () => {
-    window.femaleVoice = speechSynthesis.getVoices()[4];
-  };
-}
+window.getPokeData = function() {
+  const pokemon = getPokemon();
+  const randomPokemon = shuffle(pokemon);
+  const pokemonChoices = get4Pokemon(randomPokemon);
+  const [ firstPokemon ] = pokemonChoices;
+  const image = getPokemonImage(firstPokemon);
 
-function speakAnswer() {
-  const utterance = new SpeechSynthesisUtterance(gameData.correct.name);
-  utterance.voice = window.femaleVoice;
-  utterance.pitch = 0.9;
-  utterance.rate = 0.85;
-  speechSynthesis.speak(utterance);
-}
+  return { 
+    pokemonChoices: shuffle(pokemonChoices),
+    correct: {
+      image,
+      name: firstPokemon.name,
+    }
+  };
+};
