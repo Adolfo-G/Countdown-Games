@@ -1,8 +1,3 @@
-
-.hide {
-  display: none;
-}
-
 .timer {
   position: absolute;
   top: 10px;
@@ -16,7 +11,7 @@ a {
 }
 
 body {
-    background-color: rgb(151, 215, 231);
+    background-color: rgb(255, 255, 255);
     color: rgb(224, 84, 84);
     margin: auto;
     width: 50%;
@@ -25,7 +20,10 @@ body {
   
   main {
     position: relative;
-    width: 600px;
+    max-width: 600px;
+    min-width: 600px;
+    max-height: 355px;
+    min-height: 355px;
     background-image: url('https://res.cloudinary.com/dzynqn10l/image/upload/v1633196203/Msc/pokemon-bg_ig4uv3.jpg');
     background-size: 110%;
     background-repeat: no-repeat;
@@ -33,7 +31,8 @@ body {
   }
   
   #pokemon-container {
-    height: 355px;
+    min-height: 355px;
+    min-width: 555px;
   }
   
   #answer {
@@ -131,18 +130,18 @@ body {
     left: 0;
   }
   
-  main.pokemon-guessing-game #pokeball {
+  main.fetching #pokeball {
     visibility: visible;
   }
   
-  main.pokemon-guessing-game #pokemon-image {
+  main.fetching #pokemon-image {
     visibility: hidden;
     display: none;
   }
   
-  main.pokemon-guessing-game #choices {
+  main.fetching #choices {
     display: none;
-  }
+  }  
   
   main.revealed #pokemon-image {
     filter: none;
