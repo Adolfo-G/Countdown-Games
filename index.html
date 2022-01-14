@@ -15,17 +15,21 @@
 
     <div class="timer">Time: <span id="time">0</span></div> 
 
-    <div id="start-menu" class="columns small-6 small-centered text-center start">
+    <div id="start-menu" class="columns small-12 small-centered text-center start">
       <h2>Countdown: Pokemon Edition</h2>
         <p>
           Guess who is the Pokemon within 10 seconds!
         </p>
 
-        <div class="small button-group small-6 small-centered text-center columns">
-          <a class="success button">Easy</a>
-          <a id="start" class="primary button">Normal</a>
-          <a class="alert button" href="guessWhoPkm.html">Hard</a>
+        <div class="small button-group small-3 small-centered columns menuBtn">
+          <a><button style="color: green;">Easy</button></a>
+          <a><button style="color: blue;">Normal</button></a>
+          <a><button style="color: red;">Hard</button></a>
+          <a href="guessWhoPkm.html"><button>Play</button></a>
         </div>
+
+
+
     </div>
 
     <div class="end-menu" class="hide"></div>
@@ -35,7 +39,7 @@
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
     <script>$(document).foundation();</script>
-    <script src="assets/js/indexPkm.js"></script>
+    <script src="assets/js/index.js"></script>
     <script src="assets/js/guessWhoPkmApi.js"></script>
   </body>
 </html>
