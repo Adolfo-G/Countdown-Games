@@ -1,3 +1,11 @@
+import { library, icon } from '@fortawesome/fontawesome-svg-core'
+import { faCamera } from '@fortawesome/free-solid-svg-icons'
+
+library.add(faCamera)
+
+const camera = icon({ prefix: 'fas', iconName: 'camera' })
+
+
 let gameData;
 const main = document.querySelector('main');
 const pokemonImage = document.querySelector('#pokemon-image');
@@ -27,6 +35,8 @@ function startQuiz() {
   getQuestion();
 }
 
+startBtn.onclick = startQuiz;
+
 
 async function fetchData() {
   resetImage();
@@ -37,12 +47,12 @@ async function fetchData() {
 
 function resetImage() {
   pokemonImage.src = 'data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs%3D';
-  main.classList.add('pokemon-guessing-game');
+  main.classList.add('fetching');
   main.classList.remove('revealed');
 }
 
 function showSilhouette() {
-  main.classList.remove('pokemon-guessing-game');
+  main.classList.remove('fetching');
   pokemonImage.src = gameData.correct.image;
 }
 
