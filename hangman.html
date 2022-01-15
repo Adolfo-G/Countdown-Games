@@ -10,8 +10,9 @@
 
 <body>
 
-    <a href="index.html"><button>Back to Menu</button></a>
+    
     <div class="row"> 
+    <a href="index.html"><button>Back to Menu</button></a>
     <h1 class=" text-center title">Pokemon Hangman</h1>
         <div class="columns small-12 small-centered text-center box">
             <h2 class="info">Letter guessed: <br><br><span id="letterGuessed"></span> </h2>
@@ -23,8 +24,10 @@
                 <h3 class="info">Lives:<span id="tries">9</span></h3>
                 <h3 class="info">Win:<span id="win">0</span>&emsp;&emsp;Loss: <span id="loss">0</span> </h3>
             </div>
-        </div>
+        </div> 
+        <button id="scoreboard">Highscores</button>
     </div>
+   
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
     <script>$(document).foundation();</script>
