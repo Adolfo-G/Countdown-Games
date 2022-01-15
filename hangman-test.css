@@ -1,0 +1,56 @@
+/*centers text for center class (header and image area)*/
+.center {
+    text-align: center;
+}
+
+/*stylizes the header with a background color, text color, and a thick border*/
+#header {
+    background-color: gold;
+    border: 10px solid red;
+    color: steelblue;
+}
+
+.container-fluid {
+    margin-bottom: 50px;
+}
+
+/*centers responsive images*/
+.img-responsive {
+    margin: 0 auto;
+}
+
+/* Timer */
+#timer {
+ font-weight: bold;
+}
+
+#whosthatpokemon {
+    font-weight: bold;
+}
+
+
+#headimg {
+    max-height: 200px;
+}
+
+/*adds space between button and above text*/
+button {
+    margin-top: 40px;
+    visibility: hidden;
+}
+
+body {
+    background-color: lightgoldenrodyellow;
+}
+
+h1 {
+    font-size: 30pt;
+}
+
+p {
+    font-size: 20pt;
+}
+
+div {
+    font-size: 20px;
+}
