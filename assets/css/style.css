@@ -5,14 +5,14 @@
 }
 
 a {
-  color: rgb(224, 84, 84);
+  color: #2c70ae;
   text-decoration: none;
   transition: color 0.1s;
 }
 
 body {
     background-color: rgb(255, 255, 255);
-    color: rgb(224, 84, 84);
+    color: #2c70ae;
     margin: auto;
     width: 50%;
     padding: 10px;
@@ -82,7 +82,7 @@ body {
     margin: 10px;
     border-radius: 10px;
     text-transform: uppercase;
-    box-shadow: 0px 4px 10px 1px;
+    box-shadow: 0px 1px 5px 1px;
     cursor: pointer;
     transition: all .2s ease-out;
   }
@@ -101,7 +101,7 @@ body {
     margin: 10px;
     border-radius: 10px;
     text-transform: uppercase;
-    box-shadow: 0px 4px 10px 1px;
+    box-shadow: 0px 1px 5px 1px;
     cursor: pointer;
     transition: all .2s ease-out;
   }
