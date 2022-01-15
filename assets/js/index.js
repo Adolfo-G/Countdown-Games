@@ -1,30 +1,33 @@
 var imgEl = document.querySelector("img")
-var apiData = "";
 var ansBtn1 = document.querySelector("#ans-1")
 var ansBtn2 = document.querySelector("#ans-2")
 var ansBtn3 = document.querySelector("#ans-3")
 var ansBtn4 = document.querySelector("#ans-4")
 var scoreEl = document.querySelector("#score")
-var answerChoices = []
+var timerEl=document.querySelector("#timer")
+var apiData = ""
 var answer = ""
-var randNum = Math.floor(Math.random() * 150)
 var score = 0
 var quizAnswer = ""
 var questionNumber = 0
-var quizAnswerLetterCount = 0;
+var quizAnswerLetterCount = 0
+var seconds=5
+var pokeId=""
 
 function getQuizAnswer() {
+    assignBtnListeners()
     fetch(`https://pokeapi.co/api/v2/pokemon?limit=151`)
         .then(function (response) {
             return response.json()
         })
         .then(function (data) {
-            randNum = Math.floor(Math.random() * 150)
+            var randNum = Math.floor(Math.random() * 150)
+            pokeId=randNum+1
             quizAnswer = data.results[randNum].name
             console.log(quizAnswer)
             quizAnswerLetterCount = quizAnswer.length
-            run()
         })
+    question()
 }
 
 function question() {
@@ -34,35 +37,35 @@ function question() {
         })
         .then(function (data) {
             apiData = data
-            for (var i = 0; i < 4; i++) { pick4names() }
-            //console.log(answerChoices)
-            assignButtonNames()
-            getImg()
-            assignBtnListeners()
+            pick4names()
         })
-
+}
     function pick4names() {
-        randNum = Math.floor(Math.random() * 150)
+        var answerChoices=[]
+        for (var i = 0; i < 4; i++) {
+        var randNum = Math.floor(Math.random() * 150)
         var pokeName = apiData.results[randNum].name
-        return answerChoices.push(pokeName)
+        answerChoices.push(pokeName)
+        }
+        getImg(answerChoices)
+        assignButtonNames(answerChoices)
     }
 
-    function assignButtonNames() {
-        ansBtn1.innerHTML = answerChoices[0]
-        ansBtn2.innerHTML = answerChoices[1]
-        ansBtn3.innerHTML = answerChoices[2]
-        ansBtn4.innerHTML = answerChoices[3]
+    function assignButtonNames(arr) {
+        ansBtn1.innerHTML = arr[0]
+        ansBtn2.innerHTML = arr[1]
+        ansBtn3.innerHTML = arr[2]
+        ansBtn4.innerHTML = arr[3]
     }
 
-    function getImg() {
-        answer = answerChoices[Math.floor(Math.random() * 4)]
+    function getImg(arr) {
+        answer = arr[Math.floor(Math.random() * 4)]
         var url = `https://pokeapi.co/api/v2/pokemon/${answer}`
         fetch(url)
             .then(function (response) {
                 return response.json()
             })
             .then(function (data) {
-                //console.log(data)
                 var pokeImg = data.sprites.front_default
                 imgEl.setAttribute("src", `${pokeImg}`)
             })
@@ -76,18 +79,42 @@ function question() {
     }
     function checkIfCorrect() {
         if (this.innerHTML === answer) {
-            score += 1
+            score ++
             scoreEl.textContent = score
         }
         questionNumber++
-        run()
+        seconds=5
+        nextQ()
     }
-}
-
+    function nextQ(){
+        console.log(questionNumber, quizAnswerLetterCount)
+        if(questionNumber<quizAnswerLetterCount){
+            return question()
+        }else{
+            console.log("score:"+score, "id:"+pokeId)
+            var newPage=`hangman.html?terms=${score} ${pokeId}`
+            document.location.replace(newPage)
+        }
+    }
+    function timer(){
+        var countdown=setInterval(time,1000)
+        function time(){
+            timerEl.textContent=seconds
+            seconds--
+            if(seconds<0){
+                seconds=5
+                questionNumber++
+                if(questionNumber<quizAnswerLetterCount){
+                    question()
+                }else{
+                    clearInterval(countdown)
+                    var newPage=`hangman.html?terms=${score} ${pokeId}`
+                    document.location.replace(newPage)
+                }
+            }
+        }
+          
+    }
+ 
 getQuizAnswer()
-function run() {
-    console.log(questionNumber, quizAnswerLetterCount)
-    if(questionNumber<quizAnswerLetterCount){
-        question()
-    }
-}
+timer()
