@@ -92,7 +92,7 @@ function question() {
             return question()
         }else{
             console.log("score:"+score, "id:"+pokeId)
-            var newPage=`./page2.html?terms=${score} ${pokeId}`
+            var newPage=`hangman.html?terms=${score} ${pokeId}`
             document.location.replace(newPage)
         }
     }
@@ -108,6 +108,8 @@ function question() {
                     question()
                 }else{
                     clearInterval(countdown)
+                    var newPage=`hangman.html?terms=${score} ${pokeId}`
+                    document.location.replace(newPage)
                 }
             }
         }
