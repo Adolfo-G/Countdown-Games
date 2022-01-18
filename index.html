@@ -11,20 +11,23 @@
   <body>
 
     <div class="row">
-    <div class="scores"><a href="highscores.html"><button>View Highscores</button></a></div>
+    <div class="columns small-12 small-centered text-center scores"><a href="highscores.html"><button>View Highscores</button></a></div>
 
     <div id="start-menu" class="columns small-12 small-centered text-center start">
-      <h2>Countdown: Pokemon Edition</h2>
+      <h1>Countdown: Pokemon Edition</h1>
         <p>
           Guess the Pokemon within 5 seconds!
         </p>
 
-        <div class="small button-group small-3 small-centered columns menuBtn">
-          <a><button id="easy" value="" style="color: green;">Easy</button></a>
-          <a><button id="normal" value="" style="color: blue;">Normal</button></a>
-          <a><button id="hard" value="" style="color: red;">Hard</button></a>
+        <div class="button-group menuBtn">
+          <a><button id="easy" value="">Easy</button></a>
+          <a><button id="normal" value="">Normal</button></a>
+        </div>
+        <div class="button-group menuBtn">
+         <a><button id="hard" value="">Hard</button></a>
           <a><button id="play">Play</button></a>
         </div>
+
     </div>
 
     <div class="end-menu" class="hide"></div>
