@@ -1,47 +1,49 @@
 const params = new URLSearchParams(window.location.search);
-const score = params.get("score");
-  
+var score = params.get("score");
+var olEl = document.getElementById("highscores");
+var localData=[]
+
 console.log(score); 
-
-// function printHighscores() {
-//   // either get scores from localstorage or set to empty array
-//   var highscores = JSON.parse(window.localStorage.getItem("terms")) || [];
-
-//   // sort highscores by score property in descending order
-//   highscores.sort(function(a, b) {
-//     return b.score - a.score;
-//   });
-
-//   highscores.forEach(function(score) {
-//     // create li tag for each high score
-//     var liTag = document.createElement("li");
-//     liTag.textContent = score.initials + " - " + score.score;
-
-//     // display on page
-//     var olEl = document.getElementById("terms");
-//     olEl.appendChild(liTag);
-//   });
-// }
 
 function printHighscores() {
   // either get scores from localstorage or set to empty array
+  var highscores = JSON.parse(localStorage.getItem("terms"));
+  if(highscores!=null){
+    localData=highscores
+  }
+  localData.push(score)
+  localStorage.setItem("terms",JSON.stringify(localData))
+  console.log(localData)
+  
+  // sort highscores by score property in descending order
+  localData.sort(function(a, b) {
+    return b - a;
+  });
 
-  var liTag = document.createElement("ul");
-  liTag.textContent = "Your Score: " + score;
-
-  var olEl = document.getElementById("highscores");
-  olEl.appendChild(liTag);
-
+  var highscoreIndex;
+  for(var i=0;i<localData.length;i++){
+    // create li tag for each high score
+    var liTag = document.createElement("li");
+    liTag.classList.add("scoreboard-li")
+    highscoreIndex= localData[i]
+    console.log(highscoreIndex)
+    liTag.textContent = highscoreIndex
+    // display on page
+    olEl.appendChild(liTag);
+  };
 }
 
 function clearHighscores() {
-  window.localStorage.removeItem("highscores");
-  window.location.reload();
+  window.localStorage.clear()
+  score=null
+  if(olEl.hasChildNodes()){
+    while (olEl.firstChild) {
+        olEl.removeChild(olEl.lastChild)
+    }
+  }
 }
 
 document.getElementById("clear").onclick = clearHighscores;
 
 // run function when page loads
 printHighscores();
-
-
