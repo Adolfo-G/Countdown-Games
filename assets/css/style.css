@@ -270,4 +270,7 @@ main.revealed #answer {
   100% { transform: rotate(0deg); }
 }
 
+.scoreboard-li{
+  list-style-type: none;
+}
   
