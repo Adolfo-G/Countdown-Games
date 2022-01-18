@@ -14,19 +14,44 @@ var quizAnswerLetterCount = 0
 var seconds=5
 var pokeId=""
 
-function getQuizAnswer() {
-    assignBtnListeners()
+function getDifficulty(){
+    var easyList=[]
+    var normList=[]
+    var hardList=[]
+    var queryString = document.location.search;
+    var difficulty = queryString.split('=')[1];
     fetch(`https://pokeapi.co/api/v2/pokemon?limit=151`)
         .then(function (response) {
             return response.json()
         })
         .then(function (data) {
-            var randNum = Math.floor(Math.random() * 150)
-            pokeId=randNum+1
-            quizAnswer = data.results[randNum].name
-            console.log(quizAnswer)
-            quizAnswerLetterCount = quizAnswer.length
+            for(var i = 0;i<151;i ++){
+                var nameData = data.results[i].name
+                if(nameData.length<=5) {easyList.push(nameData)} 
+                else if(nameData.length<=7) {normList.push(nameData)}
+                else if(nameData.length>8) {hardList.push(nameData)}
+            }
+            if(difficulty==="Easy"){getQuizAnswer(easyList)}
+            else if(difficulty==="Normal"){getQuizAnswer(normList)}
+            else if(difficulty==="Hard"){getQuizAnswer(hardList)}
         })
+    
+}
+function getQuizAnswer(lists) {
+    assignBtnListeners()
+    var randNum = Math.floor(Math.random() * lists.length)
+    quizAnswer = lists[randNum]
+    fetch(`https://pokeapi.co/api/v2/pokemon/${quizAnswer}`)
+        .then(function (response) {
+            return response.json()
+        })
+        .then(function (data) {
+            pokeId=data.id
+        })
+    
+    
+    console.log(quizAnswer)
+    quizAnswerLetterCount = quizAnswer.length
     question()
 }
 
@@ -115,6 +140,5 @@ function question() {
         }
           
     }
- 
-getQuizAnswer()
+getDifficulty()
 timer()
