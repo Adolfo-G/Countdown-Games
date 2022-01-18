@@ -125,7 +125,7 @@ body {
     background: #ea2e25;
   }
   
-  #play {
+  .play {
     position: absolute;
     top: -56px;
     left: 39px;
@@ -140,12 +140,15 @@ body {
   }
   
   #pokemon-image {
-    margin: 135px 0 0 140px;
-    transform: scale(2.5);
+    /* margin: 135px 0 0 140px; */
+    /* transform: scale(2.5); */
     filter: brightness(0);
-    transition: filter .5s ease-out;
-    position: absolute;
+    transition: filter .2s ease-out;
+    /* position: absolute; */
     left: 0;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 300px
   }
   
   main.fetching #pokeball {
