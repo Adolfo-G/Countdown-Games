@@ -11,27 +11,99 @@ a {
 }
 
 body {
-    background-color: rgb(255, 255, 255);
+    background-image: url("https://images.wallpapersden.com/image/download/pokemon-pikachu-art_a25tbW6UmZqaraWkpJRmbmdlrWZlbWU.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
     color: #2c70ae;
     margin: auto;
     width: 50%;
-    padding: 10px;
+    padding-top: 15%;
   }
 
 .start {
   background-color: #3d7dca;
   border-radius: 10px;
+  border-style: solid;
+  border-width: thick;
+  border-color: #ffcb05;
+  box-shadow: 0px 2px 10px 2px;
+  width: 750px;
 
 }
 
-.start p, h2{
+.start h1 {
+  color: #ffcb05;
+
+}
+
+.start p {
+  color: #ffcb05;
+  font-size: 20px;
+  font-weight: 700;
+}  
+
+.scores {
+ background-color: #ffcb05;
+ border-radius: 10px;
+ border-style: solid;
+ border-width: thick;
+ border-color: #3d7dca;
+ margin-bottom: 10px;
+ box-shadow: 0px 2px 10px 2px;
+ width: 750px;
+}
+
+.scoreboard {
+  background-color: #3d7dca;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: thick;
+  border-color: #ffcb05;
+  box-shadow: 0px 2px 10px 2px;
+  width: 750px;
+}
+
+.scoreboard h1 {
   color: #ffcb05;
 }
-  
-.scores {
 
+.scoreboard ol {
+  color: #ffcb05;
+  font-size: 20px;
+  font-weight: 700;
 }
-main {
+
+.guessPkm {
+  background-color: #3d7dca;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: thick;
+  border-color: #ffcb05;
+  box-shadow: 0px 2px 10px 2px;
+  width: 750px;
+}
+
+.guessPkmST {
+  background-color: #ffcb05;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: thick;
+  border-color: #3d7dca;
+  margin-bottom: 10px;
+  box-shadow: 0px 2px 10px 2px;
+  width: 200px;
+ }
+
+.guessPkmST p {
+  color: #3d7dca;
+  font-size: 20px;
+  font-weight: 700px;
+  margin-left: 20px;
+}
+
+
+/* main {
   position: relative;
   max-width: 600px;
   min-width: 600px;
@@ -46,13 +118,13 @@ main {
 #pokemon-container {
   min-height: 355px;
   min-width: 555px;
-}
+} */
 
 #answer {
   display: none;
 }
 
-#bg-overlay {
+/* #bg-overlay {
   color: #fff;
   position: absolute;
   background-color: #dd1716;
@@ -61,9 +133,9 @@ main {
   height: 170px;
   top: 60px;
   border-radius: 50%;
-}
+} */
 
-#text-overlay {
+/* #text-overlay {
   position: absolute;
   right: 20px;
   top: 100px;
@@ -78,7 +150,7 @@ main {
   text-shadow: 2px 2px #1d366c;
   border-radius: 20px;
   text-align: center;
-}
+} */
 
 #controls {
   position: relative;
@@ -88,10 +160,10 @@ main {
 button {
   background: #fff;
   border: none;
-  color: #3e7ae7;
+  color: #3d7dca;
   font-weight: 600;
   font-size: 14px;
-  padding: 10px 36px;
+  padding: 10px 30px;
   margin: 10px;
   border-radius: 10px;
   text-transform: uppercase;
@@ -102,13 +174,13 @@ button {
 
 button:hover {
   box-shadow: 0px 4px 10px 4px;
-  background-color: #f8e28a;
+  background-color: #ffcb02;
 }
 
 .menuBtn button {
   background: #fff;
   border: none;
-  color: #3e7ae7;
+  color: #3d7dca;
   font-weight: 600;
   font-size: 14px;
   margin: 10px;
@@ -117,11 +189,12 @@ button:hover {
   box-shadow: 0px 1px 5px 1px;
   cursor: pointer;
   transition: all .2s ease-out;
+  transition-duration: 0.4s;
 }
 
 .menuBtn button:hover {
   box-shadow: 0px 4px 10px 4px;
-  background-color: #f8e28a;
+  background-color: #ffcb02;
 }
 
 .guessBtn button.correct,
@@ -144,19 +217,20 @@ button:hover {
   left: 39px;
 }
 
-#pokeball {
+/* #pokeball {
   width: 78px;
   margin: 144px 0 0 144px;
   position: absolute;
   visibility: hidden;
   animation: wiggle 1.35s infinite;
-}
+} */
 
 #pokemon-image {
   margin: 135px 0 0 140px;
   transform: scale(2.5);
   filter: brightness(0);
   transition: filter .5s ease-out;
+  animation: wiggle 1.35s infinite;
   position: absolute;
   left: 0;
 }
