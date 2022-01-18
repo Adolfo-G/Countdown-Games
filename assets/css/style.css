@@ -29,7 +29,7 @@ body {
 }
   
 .scores {
-  
+
 }
 main {
   position: relative;
@@ -139,7 +139,7 @@ button:hover {
 }
 
 #play {
-  position: absolute;
+  /* position: absolute; */
   top: -56px;
   left: 39px;
 }
