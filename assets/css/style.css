@@ -1,9 +1,3 @@
-.timer {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-}
-
 a {
   color: #2c70ae;
   text-decoration: none;
@@ -18,7 +12,8 @@ body {
     color: #2c70ae;
     margin: auto;
     width: 50%;
-    padding-top: 15%;
+    padding-top: 10%;
+    padding-bottom: 10%;
   }
 
 .start {
@@ -92,69 +87,14 @@ body {
   border-color: #3d7dca;
   margin-bottom: 10px;
   box-shadow: 0px 2px 10px 2px;
-  width: 200px;
+  width: 750px;
  }
 
 .guessPkmST p {
   color: #3d7dca;
   font-size: 20px;
-  font-weight: 700px;
   margin-left: 20px;
-}
-
-
-/* main {
-  position: relative;
-  max-width: 600px;
-  min-width: 600px;
-  max-height: 355px;
-  min-height: 355px;
-  background-image: url('https://res.cloudinary.com/dzynqn10l/image/upload/v1633196203/Msc/pokemon-bg_ig4uv3.jpg');
-  background-size: 110%;
-  background-repeat: no-repeat;
-  border-radius: 10px;
-}
-
-#pokemon-container {
-  min-height: 355px;
-  min-width: 555px;
-} */
-
-#answer {
-  display: none;
-}
-
-/* #bg-overlay {
-  color: #fff;
-  position: absolute;
-  background-color: #dd1716;
-  right: 25px;
-  width: 200px;
-  height: 170px;
-  top: 60px;
-  border-radius: 50%;
-} */
-
-/* #text-overlay {
-  position: absolute;
-  right: 20px;
-  top: 100px;
-  background-color: #ffcb02;
-  border: solid 7px #2c70ae;
-  padding: 20px;
-  min-width: 130px;
-  font-family: 'Bangers', Arial, sans-serif;
-  font-size: 36px;
-  letter-spacing: 1.2px;
-  color: #3ea2fe;
-  text-shadow: 2px 2px #1d366c;
-  border-radius: 20px;
-  text-align: center;
-} */
-
-#controls {
-  position: relative;
-  padding: 20px 40px;
+  margin-top: 10px;
 }
 
 button {
@@ -173,6 +113,11 @@ button {
 }
 
 button:hover {
+  box-shadow: 0px 4px 10px 4px;
+  background-color: #ffcb02;
+}
+
+button:active {
   box-shadow: 0px 4px 10px 4px;
   background-color: #ffcb02;
 }
@@ -197,69 +142,17 @@ button:hover {
   background-color: #ffcb02;
 }
 
-.guessBtn button.correct,
-.guessBtn button.incorrect {
-  color: #d9fcd9;
-  box-shadow: none;
-}
-
-.guessBtn button.correct {
-  background: #0dff0d;
-}
-
-.guessBtn button.incorrect {
-  background: #ea2e25;
-}
-
-#play {
-  /* position: absolute; */
-  top: -56px;
-  left: 39px;
-}
-
-/* #pokeball {
-  width: 78px;
-  margin: 144px 0 0 144px;
-  position: absolute;
-  visibility: hidden;
-  animation: wiggle 1.35s infinite;
-} */
-
 #pokemon-image {
-  margin: 135px 0 0 140px;
   transform: scale(2.5);
+  animation: wiggle 1.5s infinite;
+}
+
+.style {
+  filter: brightness(100%);
+}
+
+.style2 {
   filter: brightness(0);
-  transition: filter .5s ease-out;
-  animation: wiggle 1.35s infinite;
-  position: absolute;
-  left: 0;
-}
-
-main.fetching #pokeball {
-  visibility: visible;
-}
-
-main.fetching #pokemon-image {
-  visibility: hidden;
-  display: none;
-}
-
-main.fetching #choices {
-  display: none;
-}  
-
-main.revealed #pokemon-image {
-  filter: none;
-}
-
-main.revealed #answer {
-  display: block;
-}
-
-#choices {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 20px;
 }
 
 @keyframes wiggle {
