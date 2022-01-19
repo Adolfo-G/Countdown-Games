@@ -1,9 +1,6 @@
 var scoreboardBtnEl = document.querySelector("#scoreboard")
 const params = new URLSearchParams(window.location.search);
 const score = params.get("score");
-const pokeId = params.get("index");
-
-
 
 
 scoreboardBtnEl.addEventListener("click", scoreboardPage)
@@ -12,14 +9,22 @@ function scoreboardPage(){
     document.location.replace(newPage)
 }
 
-function saveHighscore() {
-    var highscores =
-        JSON.parse(window.localStorage.getItem("highscores")) || [];
-   
-    var newScore = score
-        highscores.push(newScore);
-        window.localStorage.setItem("highscores", JSON.stringify(highscores));
-}
 
 console.log("Guessing game score: " + score);
-console.log("Pokemon index: " + pokeId);
+
+fetch("https://random-words5.p.rapidapi.com/getMultipleRandom?count=5", {
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-host": "random-words5.p.rapidapi.com",
+		"x-rapidapi-key": "aaeb0aee48msh1c1b9566e7c4d04p18d20bjsn0f12c9d4dee0"
+	}
+})
+.then(response => {
+	return response.json()
+})
+.catch(err => {
+	console.error(err);
+})
+.then(function(data){
+    console.log(data)
+})

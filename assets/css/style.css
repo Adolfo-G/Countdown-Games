@@ -5,8 +5,6 @@ a {
 }
 
 body {
-    background-image: url("https://images.wallpapersden.com/image/download/pokemon-pikachu-art_a25tbW6UmZqaraWkpJRmbmdlrWZlbWU.jpg");
-    background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     color: #2c70ae;
@@ -77,6 +75,7 @@ body {
   border-color: #ffcb05;
   box-shadow: 0px 2px 10px 2px;
   width: 750px;
+  margin-bottom: 10%;
 }
 
 .guessPkmST {
@@ -142,28 +141,10 @@ button:active {
   background-color: #ffcb02;
 }
 
-#pokemon-image {
-  transform: scale(2.5);
-  animation: wiggle 1.5s infinite;
-}
-
-.style {
-  filter: brightness(100%);
-}
-
-.style2 {
-  filter: brightness(0);
-}
-
-@keyframes wiggle {
-  0% { transform: rotate(0deg); }
-  80% { transform: rotate(0deg); }
-  85% { transform: rotate(6deg); }
-  95% { transform: rotate(-6deg); }
-  100% { transform: rotate(0deg); }
+#quiz-question {
+  color: white;
 }
 
 .scoreboard-li{
   list-style-type: none;
 }
-  
