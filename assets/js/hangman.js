@@ -12,14 +12,6 @@ function scoreboardPage(){
     document.location.replace(newPage)
 }
 
-function saveHighscore() {
-    var highscores =
-        JSON.parse(window.localStorage.getItem("highscores")) || [];
-   
-    var newScore = score
-        highscores.push(newScore);
-        window.localStorage.setItem("highscores", JSON.stringify(highscores));
-}
 
 console.log("Guessing game score: " + score);
 console.log("Pokemon index: " + pokeId);
