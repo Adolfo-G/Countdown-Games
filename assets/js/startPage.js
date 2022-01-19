@@ -27,7 +27,7 @@ function startGame(){
         return mode   
     }
     if(modeCheck()!==""){
-        var newPage=`guessWhoPkm.html?terms=${modeCheck()}`
+        var newPage=`triviaQ.html?terms=${modeCheck()}`
         document.location.replace(newPage)
     }
 }
