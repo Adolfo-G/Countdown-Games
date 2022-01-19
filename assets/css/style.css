@@ -1,9 +1,3 @@
-.timer {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-}
-
 a {
   color: #2c70ae;
   text-decoration: none;
@@ -18,7 +12,8 @@ body {
     color: #2c70ae;
     margin: auto;
     width: 50%;
-    padding-top: 15%;
+    padding-top: 10%;
+    padding-bottom: 10%;
   }
 
 .start {
@@ -92,16 +87,15 @@ body {
   border-color: #3d7dca;
   margin-bottom: 10px;
   box-shadow: 0px 2px 10px 2px;
-  width: 200px;
+  width: 750px;
  }
 
 .guessPkmST p {
   color: #3d7dca;
   font-size: 20px;
-  font-weight: 700px;
   margin-left: 20px;
+  margin-top: 10px;
 }
-
 
 button {
   background: #fff;
@@ -119,6 +113,11 @@ button {
 }
 
 button:hover {
+  box-shadow: 0px 4px 10px 4px;
+  background-color: #ffcb02;
+}
+
+button:active {
   box-shadow: 0px 4px 10px 4px;
   background-color: #ffcb02;
 }
@@ -143,7 +142,27 @@ button:hover {
   background-color: #ffcb02;
 }
 
+#pokemon-image {
+  transform: scale(2.5);
+  animation: wiggle 1.5s infinite;
+}
+
+.style {
+  filter: brightness(100%);
+}
+
+.style2 {
+  filter: brightness(0);
+}
+
+@keyframes wiggle {
+  0% { transform: rotate(0deg); }
+  80% { transform: rotate(0deg); }
+  85% { transform: rotate(6deg); }
+  95% { transform: rotate(-6deg); }
+  100% { transform: rotate(0deg); }
+}
+
 .scoreboard-li{
   list-style-type: none;
 }
-  
