@@ -1,21 +1,16 @@
-// var scoreboardBtnEl = document.querySelector("#scoreboard")
-// const params = new URLSearchParams(window.location.search);
-// const score = params.get("score");
-// const pokeId = params.get("index");
+var scoreboardBtnEl = document.querySelector("#scoreboard")
+const params = new URLSearchParams(window.location.search);
+const score = params.get("score");
 
 
+scoreboardBtnEl.addEventListener("click", scoreboardPage)
+function scoreboardPage(){
+    var newPage = "highscores.html?score=" + score 
+    document.location.replace(newPage)
+}
 
 
-
-// scoreboardBtnEl.addEventListener("click", scoreboardPage)
-// function scoreboardPage(){
-//     var newPage = "highscores.html?score=" + score 
-//     document.location.replace(newPage)
-// }
-
-
-// console.log("Guessing game score: " + score);
-// console.log("Pokemon index: " + pokeId);
+console.log("Guessing game score: " + score);
 
 fetch("https://random-words5.p.rapidapi.com/getMultipleRandom?count=5", {
 	"method": "GET",

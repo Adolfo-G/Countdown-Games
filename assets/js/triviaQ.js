@@ -38,16 +38,34 @@ function pick4names(data) {
     var correctAnswers= apiDataResults.correct_answer
     answer=correctAnswers
     console.log(answer)
+    
     answerChoices.push(correctAnswers)
     for (var i = 0; i < 3; i++) {
         var incorrectAnswers = apiDataResults.incorrect_answers[i]
         answerChoices.push(incorrectAnswers)          
     }
+    
     question(apiDataResults)
-    assignButtonNames(answerChoices)
+    assignButtonNames(mix(answerChoices))
     assignBtnListeners()
-
 }
+
+function mix(answerChoices){
+    console.log(answerChoices)
+    var choices=answerChoices
+    var mixedChoices=[]
+    for (var j = 0; j < 4; j++) {
+        var answerChoice=choices[Math.floor(Math.random()*choices.length)]
+        const index = choices.indexOf(answerChoice);
+        if (index > -1) {
+            choices.splice(index, 1);
+        }
+        mixedChoices.push(answerChoice)
+    }
+    console.log(mixedChoices)
+    return mixedChoices
+}
+
 function question(data) {
     quizQuestion=data.question
     quizQuestionEl.innerHTML=quizQuestion
