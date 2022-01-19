@@ -33,7 +33,9 @@ function getDifficulty(){
             }
             if(difficulty==="Easy"){getQuizAnswer(easyList)}
             else if(difficulty==="Normal"){getQuizAnswer(normList)}
-            else if(difficulty==="Hard"){getQuizAnswer(hardList)}
+            else if(difficulty==="Hard"){
+                hidePokemon()
+                getQuizAnswer(hardList)}
         })
     
 }
@@ -139,6 +141,10 @@ function timer(){
         }
     }
 }
+
+function hidePokemon() {
+    imgEl.classList.add("style2")
+  }
 
 getDifficulty()
 timer()
