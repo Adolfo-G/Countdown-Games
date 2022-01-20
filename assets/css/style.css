@@ -1,186 +1,109 @@
-.timer {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-}
-
 a {
-  color: rgb(224, 84, 84);
+  color: #EF476F;
   text-decoration: none;
   transition: color 0.1s;
 }
 
 body {
-    background-color: rgb(255, 255, 255);
-    color: rgb(224, 84, 84);
+    background-image: url("https://images.unsplash.com/photo-1513151233558-d860c5398176?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
+    background-attachment: fixed;
+    background-size: cover;
     margin: auto;
     width: 50%;
-    padding: 10px;
-  }
-  
-  main {
-    position: relative;
-    max-width: 600px;
-    min-width: 600px;
-    max-height: 355px;
-    min-height: 355px;
-    background-image: url('https://res.cloudinary.com/dzynqn10l/image/upload/v1633196203/Msc/pokemon-bg_ig4uv3.jpg');
-    background-size: 110%;
-    background-repeat: no-repeat;
-    border-radius: 10px;
-  }
-  
-  #pokemon-container {
-    min-height: 355px;
-    min-width: 555px;
-  }
-  
-  #answer {
-    display: none;
-  }
-  
-  #bg-overlay {
-    color: #fff;
-    position: absolute;
-    background-color: #dd1716;
-    right: 25px;
-    width: 200px;
-    height: 170px;
-    top: 60px;
-    border-radius: 50%;
-  }
-  
-  #text-overlay {
-    position: absolute;
-    right: 20px;
-    top: 100px;
-    background-color: #ffcb02;
-    border: solid 7px #2c70ae;
-    padding: 20px;
-    min-width: 130px;
-    font-family: 'Bangers', Arial, sans-serif;
-    font-size: 36px;
-    letter-spacing: 1.2px;
-    color: #3ea2fe;
-    text-shadow: 2px 2px #1d366c;
-    border-radius: 20px;
-    text-align: center;
-  }
-  
-  #controls {
-    position: relative;
-    padding: 20px 40px;
-  }
-  
-  button {
-    background: #fff;
-    border: none;
-    color: #3e7ae7;
-    font-weight: 600;
-    font-size: 14px;
-    padding: 10px 36px;
-    margin: 10px;
-    border-radius: 10px;
-    text-transform: uppercase;
-    box-shadow: 0px 4px 10px 1px;
-    cursor: pointer;
-    transition: all .2s ease-out;
-  }
-  
-  button:hover {
-    box-shadow: 0px 4px 10px 4px;
-    background-color: #f8e28a;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    font-family: 'Dongle', sans-serif;
+    font-size: 25px;
   }
 
-  .menuBtn button {
-    background: #fff;
-    border: none;
-    color: #3e7ae7;
-    font-weight: 600;
-    font-size: 14px;
-    margin: 10px;
-    border-radius: 10px;
-    text-transform: uppercase;
-    box-shadow: 0px 4px 10px 1px;
-    cursor: pointer;
-    transition: all .2s ease-out;
-  }
-  
-  .menuBtn button:hover {
-    box-shadow: 0px 4px 10px 4px;
-    background-color: #f8e28a;
-  }
-  
-  .guessBtn button.correct,
-  .guessBtn button.incorrect {
-    color: #d9fcd9;
-    box-shadow: none;
-  }
-  
-  .guessBtn button.correct {
-    background: #0dff0d;
-  }
-  
-  .guessBtn button.incorrect {
-    background: #ea2e25;
-  }
-  
-  #play {
-    position: absolute;
-    top: -56px;
-    left: 39px;
-  }
-  
-  #pokeball {
-    width: 78px;
-    margin: 144px 0 0 144px;
-    position: absolute;
-    visibility: hidden;
-    animation: wiggle 1.35s infinite;
-  }
-  
-  #pokemon-image {
-    margin: 135px 0 0 140px;
-    transform: scale(2.5);
-    filter: brightness(0);
-    transition: filter .5s ease-out;
-    position: absolute;
-    left: 0;
-  }
-  
-  main.fetching #pokeball {
-    visibility: visible;
-  }
-  
-  main.fetching #pokemon-image {
-    visibility: hidden;
-    display: none;
-  }
-  
-  main.fetching #choices {
-    display: none;
-  }  
-  
-  main.revealed #pokemon-image {
-    filter: none;
-  }
-  
-  main.revealed #answer {
-    display: block;
-  }
-  
-  #choices {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
-  }
-  
-  @keyframes wiggle {
-    0% { transform: rotate(0deg); }
-    80% { transform: rotate(0deg); }
-    85% { transform: rotate(6deg); }
-    95% { transform: rotate(-6deg); }
-    100% { transform: rotate(0deg); }
-  }
+.start, .scores, 
+.scoreboard, .triviaGame, .triviaHead {
+  background-color: #118AB2;
+  border-radius: 10px;
+  border-style: dotted;
+  border-width: thick;
+  border-color: #ffffff;
+  box-shadow: 1px 4px 15px 6px;
+  width: 850px;
+  margin: 15px;
 
-  
+}
+
+.triviaQuestions{
+  min-height: 250px;
+}
+
+#triviaTitle {
+  color: #EF476F;
+  font-family: 'Mochiy Pop P One';
+  font-size: 60px;
+
+}
+
+#quiz-question {
+  color: #073B4C;
+  font-family: 'Mochiy Pop P One';
+  font-size: 30px;
+  margin-bottom: 15px;
+  margin-top: 30px;
+}
+
+#button-answers button {
+  color: #073B4C;
+  font-size: 25px;
+  font-weight: 500px;
+}
+
+.start p {
+  color: #FFD166;
+  font-size: 35px;
+  font-weight: 600;
+}  
+
+
+.scoreboard h1 {
+  color: #FFD166;
+}
+
+.scoreboard ol {
+  color: #FFD166;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+#triviaHead {
+  color: #073B4C;
+  font-size: 35px;
+  font-weight: 700;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+button {
+  background: #ffffff;
+  border: thin;
+  color: #073B4C;
+  font-weight: 600;
+  font-size: 30px;
+  padding: 15px 30px;
+  margin: 8px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  box-shadow: 0px 1px 5px 1px;
+  cursor: pointer;
+  transition: all .2s ease-out;
+}
+
+button:hover {
+  box-shadow: 0px 4px 10px 4px;
+  background-color: #EF476F;
+}
+
+button:active {
+  box-shadow: 0px 4px 10px 4px;
+  background-color: #EF476F;
+}
+
+.scoreboard-li{
+  list-style-type: none;
+}

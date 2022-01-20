@@ -4,21 +4,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Highscores</title>
-    <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
-    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <title>Scoreboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dongle&family=Mochiy+Pop+P+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css" />
   </head>
 
 
   <body>
     <div class="row">
 
-      <div class="columns small-6 small-centered text-center">
-        <h1>Highscores</h1>
-        <ol id="highscores"></ol>
-  
-        <a class="primary button" href="index.html"><button>Go Back</button></a>
-        <button class="alert button" id="clear">Clear Highscores</button>
+      <div class="columns small-6 small-centered text-center scoreboard">
+        <h1>Scoreboard</h1>
+
+        <ol id="highscores"></ol> 
+
+        <div class="row button-group align-justify">
+          <button><a href="index.html">Retry</a></button>
+        </div>
+        <div class="row button-group align-justify">
+          <button id="clear">Clear Highscores</button>
+        </div>
+        
       </div>
       
     </div>
@@ -28,6 +35,6 @@
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
     <script>$(document).foundation();</script>
-    <script src="/assets/js/scores.js"></script>
+    <script src="assets/js/scores.js"></script>
   </body>
 </html>
