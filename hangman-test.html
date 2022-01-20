@@ -1,49 +1,59 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-    <title>Pokemon Hangman</title>
+    <title>Game 2</title>
+    
+    <!-- Source -->
+    <link rel="stylesheet" href="hangman-test.css"/>
+    <script type ="text/javascript" src="hangman-test.js"></script>
 
-   
-    <!--Link to custom stylesheet-->
-    <link type="text/css" rel="stylesheet" href="hangman-test.css">
-
-    <!--Link to javascript-->
-    <script type="text/javascript" src="hangman-test.js"></script>
 </head>
-<body>
 
-
-
-    <!--Big Pokemon header - full width-->
-    <header class="container-fluid col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 center" id="header">
-        <h1>
-            <!--Pokemon logo image-->
-
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/2000px-International_Pok%C3%A9mon_logo.svg.png"  class="img-responsive" id="headimg">
-        </h1>
-        <h1>Hangman Game!</h1>
-    </header>
-
-	<!-- TIMER -->
-	<div class="timer">Time: <span id="time">0</span></div> 
-	
-    <!-- GAME AREA -->
-    <div class="container col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-        <p>Press any key to get started!</p>
-        <p id="wins">Wins: 0</p>
-        <p id="losses">Losses: 0</p>
-        <p id="guessCount">Guesses left: 10</p>
-        <p>Who's that pokemon?</p>
-        <p id="answer">_ _ _ _ _</p>
-        <button class="btn btn-primary btn-lg" id="playagain">
-            Play again?
-        </button>
+<!-- HEADER -->
+<header>
+    <div class="wrapper">
+        <h1>Hangman Game</h1>
+        <img src="http://clipart-library.com/image_gallery/28114.jpg" width="192" height="120"
     </div>
 
 
-    
-</body>
-</html>
+</header>
+
+<!-- MAIN GAME -->
+
+<body>
+    <div id="hangm">
+
+            <div style="height: 2em; margin-bottom: 3em;">
+                <div id="hangm_end" class="h"></div>
+            </div>
+
+            <div id="hangm_animation">
+                <div id="hangm_2" class="h pole_h"></div>
+                <div id="hangm_1" class="h pole_v"></div>
+
+                <div id="hangm_3" class="h rope"></div>
+
+                <div id="hangm_4" class="h man_head"></div>
+                <div id="hangm_5" class="h man_upper"></div>
+                <div id="hangm_6" class="h man_lower"></div>
+            </div>
+
+            <div style="height: 2em;">
+                <div id="hangm_guesses" class="h"></div>
+            </div>
+
+            <form>
+                <div id="hangm_guessbox" style="height: 8em;" class="h">
+                    <div style="height: 4em;">
+                        Guess the word:<div id="hangm_word"></div>
+                    </div>
+                    <input id="guess" onkeyup="Hangman.guess(this.value); this.value=''; return false;" type="text" placeholder="">
+                </div>
+                <div class="col-sm-3">
+                    <button type="button" id="btn-start" class="btn-lg btn-info" onclick="Hangman.reset(); return false;" >New Game</button>
+                </div>
+            </form>
+
+    </div>
+ 
+ 

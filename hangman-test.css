@@ -1,56 +1,18 @@
-/*centers text for center class (header and image area)*/
-.center {
+header {
+    align-items: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: greenyellow s;
+}
+
+
+html,body {
+    font-family: fantasy;
     text-align: center;
+    color: hotpink;
 }
 
-/*stylizes the header with a background color, text color, and a thick border*/
-#header {
-    background-color: gold;
-    border: 10px solid red;
-    color: steelblue;
+h1{
+    align-items: center;
+    background-color: greenyellow;
 }
 
-.container-fluid {
-    margin-bottom: 50px;
-}
-
-/*centers responsive images*/
-.img-responsive {
-    margin: 0 auto;
-}
-
-/* Timer */
-#timer {
- font-weight: bold;
-}
-
-#whosthatpokemon {
-    font-weight: bold;
-}
-
-
-#headimg {
-    max-height: 200px;
-}
-
-/*adds space between button and above text*/
-button {
-    margin-top: 40px;
-    visibility: hidden;
-}
-
-body {
-    background-color: lightgoldenrodyellow;
-}
-
-h1 {
-    font-size: 30pt;
-}
-
-p {
-    font-size: 20pt;
-}
-
-div {
-    font-size: 20px;
-}
