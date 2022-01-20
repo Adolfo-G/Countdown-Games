@@ -4,25 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>trivia quiz</title>
+    <title>Trivia Countdown!</title>
     <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dongle&family=Mochiy+Pop+P+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css" /> 
 </head>
 
 <body>
   <div class="row">
-    <div class="columns small-12 small-centered guessPkmST">
-      <p>Score: <span id="score"></span></p>
-      <p>Timer: <span id="timer"></span></p>
+    <div class="columns small-12 small-centered triviaHead">
+      <p id="triviaHead">Score: <span id="score"></span></p>
+      <p id="triviaHead">Timer: <span id="timer"></span></p>
     </div>
   </div>
 
   <div class="row">
-    <div class="columns small-12 small-centered text-center guessPkm">
-
-        <h2 id="quiz-question" style="margin-left: auto; margin-right: auto; min-width: 300px"></h2>
-
+    <div class="columns small-12 small-centered text-center triviaGame">
+      
+      <h2 id="quiz-question" style="margin-left: auto; margin-right: auto; min-width: 300px"></h2>
+      <br>
         <div id="button-answers" class="small button-group">
             <button id="ans-1"></button>
             <button id="ans-2"></button>
@@ -33,7 +34,7 @@
           <button id="ans-4"></button>
       </div>
 
-        <a href="index.html"><button>Retry</button></a>
+        <!-- <a href="index.html"><button>Retry</button></a> -->
 
     </div>
   </div>
