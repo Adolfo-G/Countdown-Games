@@ -3,9 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Countdown: Pokemon Edition</title>
+    <title>Trivia Countdown!</title>
     <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dongle&family=Mochiy+Pop+P+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css" /> 
   </head>
   <body>
@@ -14,17 +15,18 @@
     <div class="columns small-12 small-centered text-center scores"><a href="highscores.html"><button>View Highscores</button></a></div>
 
     <div id="start-menu" class="columns small-12 small-centered text-center start">
-      <h1>Trivia Countdown Edition</h1>
+      <h1 id="triviaTitle">Trivia Countdown!</h1>
         <p>
-          Trivia quiz in 5 seconds!
+          Trivia quiz: answer each question within 5 seconds!
         </p>
 
-        <div class="button-group menuBtn">
+        <div class="button-group align-center">
           <a><button id="easy" value="">Easy</button></a>
           <a><button id="normal" value="">Normal</button></a>
+          <a><button id="hard" value="">Hard</button></a>
         </div>
-        <div class="button-group menuBtn">
-         <a><button id="hard" value="">Hard</button></a>
+
+        <div class="button-group align-center">
           <a><button id="play">Play</button></a>
         </div>
 
@@ -35,7 +37,7 @@
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
     <script>$(document).foundation();</script>
-    <script src="assets/js/startPage.js"></script>
+    <script src="assets/js/index.js"></script>
   </body>
 </html>
 
