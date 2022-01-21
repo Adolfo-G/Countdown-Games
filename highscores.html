@@ -16,15 +16,18 @@
     <div class="row">
 
       <div class="columns small-6 small-centered text-center scoreboard">
-        <h1>Scoreboard</h1>
+        <h1 id="scoreboardHeader"><i class="fas fa-star"></i> Scoreboard <i class="fas fa-star"></i></h1>
 
-        <ol id="highscores"></ol> 
+        <ol id="highscores">
+          <li id="scoreboard-li"></li>
+        </ol> 
+        
 
         <div class="row button-group align-justify">
-          <button><a href="index.html">Retry</a></button>
+          <a href="index.html"><button><i class="fas fa-undo-alt"></i>Retry</button></a>
         </div>
         <div class="row button-group align-justify">
-          <button id="clear">Clear Highscores</button>
+          <button id="clear"><i class="fas fa-eraser"></i>Clear Highscores</button>
         </div>
         
       </div>
@@ -36,6 +39,7 @@
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
     <script>$(document).foundation();</script>
+    <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" data-auto-a11y="true"></script>
     <script src="assets/js/scores.js"></script>
   </body>
 </html>
