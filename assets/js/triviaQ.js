@@ -12,7 +12,7 @@ var answer = ""
 var score = 0
 var questionNumber = 0
 var totalQuestions = 5
-var seconds=10
+var seconds=20
 
 function getDifficulty(){
     var queryString = document.location.search;
@@ -91,7 +91,7 @@ function checkIfCorrect() {
         scoreEl.textContent = score
     }
     questionNumber++
-    seconds=10
+    seconds=20
     nextQ()
 }
 function nextQ(){
@@ -110,7 +110,7 @@ function timer(){
         timerEl.textContent=seconds
         seconds--
         if(seconds<0){
-            seconds=10
+            seconds=20
             questionNumber++
             if(questionNumber<totalQuestions){
                 pick4names(apiData)
