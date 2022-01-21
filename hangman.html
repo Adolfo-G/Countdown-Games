@@ -3,16 +3,14 @@
 
 <head>
     <meta charset=UTF-8>
-
+    <title>Countdown Games!</title>
     <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dongle&family=Mochiy+Pop+P+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/css/hangman.css">
-
-    <title>Hangman Game</title>
 </head>
 
 <body>
-
-    
     <div class="row"> 
     <a href="index.html"><button>Back to Menu</button></a>
     <h1 class=" text-center title">Hangman</h1>
@@ -26,16 +24,23 @@
             <div class="columns small-12 small-centered text-center box">
                 <h3 class="info">Lives:<span id="tries">9</span></h3>
             </div>
-        </div> 
-        <button id="scoreboard">Highscores</button>
+            
+            <div>
+                <div class="columns small-12 small-centered text-center scoreBox">
+                    <h4 class="info">Lives:<span id="tries">9</span></h4>
+                    <h4 class="info">Win:<span id="win">0</span>&emsp;&emsp;Loss: <span id="loss">0</span> </h4>
+                </div>
+            </div> 
+            <button id="scoreboard"><i class="fas fa-star"></i> Scoreboard</button>
+            <a href="index.html"><button><i class="fas fa-undo-alt"></i> Retry</button></a>
+        </div>
     </div>
-   
+
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
     <script>$(document).foundation();</script>
+    <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" data-auto-a11y="true"></script>
     <script src="assets/js/hangman.js"></script>
-
 </body>
-
 </html>
 

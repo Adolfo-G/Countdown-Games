@@ -40,8 +40,7 @@ button:hover {
   background-color: #EF476F;
 }
 
-.startMenu, .scores, 
-.scoreboard, .triviaGame, .triviaHead {
+.startMenu {
   background-image: url(../img/AdobeStock_469248894.JPEG);
   background-size: auto;
   background-repeat: no-repeat;
@@ -51,8 +50,61 @@ button:hover {
   border-color: #ffffff;
   box-shadow: 0px 0px 5px #ffffff;
   width: 850px;
-  margin-top: 5%;
+  margin: 50px auto auto auto;
 }
+
+.scores {
+  background-image: url(../img/AdobeStock_469248894.JPEG);
+  background-size: auto;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  border-style: dotted;
+  border-width: thick;
+  border-color: #ffffff;
+  box-shadow: 0px 0px 5px #ffffff;
+  width: 850px;
+  margin: 20px auto auto auto;
+}
+
+.scoreboard {
+  background-image: url(../img/AdobeStock_469248894.JPEG);
+  background-size: auto;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  border-style: dotted;
+  border-width: thick;
+  border-color: #ffffff;
+  box-shadow: 0px 0px 5px #ffffff;
+  width: 850px;
+  margin: 200px auto auto auto;
+}
+
+.triviaHead {
+  background-image: url(../img/AdobeStock_469248894.JPEG);
+  background-size: auto;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  border-style: dotted;
+  border-width: thick;
+  border-color: #ffffff;
+  box-shadow: 0px 0px 5px #ffffff;
+  width: 850px;
+  margin: 200px auto auto auto;
+}
+
+.triviaGame {
+  background-image: url(../img/AdobeStock_469248894.JPEG);
+  background-size: auto;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  border-style: dotted;
+  border-width: thick;
+  border-color: #ffffff;
+  box-shadow: 0px 0px 5px #ffffff;
+  width: 850px;
+  margin: 20px auto auto auto;
+}
+
 
 #triviaHeadS {
   color: #EF476F;
@@ -77,8 +129,8 @@ button:hover {
 }
 
 #menuImg {
-  min-height: 300px;
-  width: 300px;
+  height: 300px;
+  width: 375px;
   border-radius: 10px;
   margin: 5% auto 5% auto;
   border:thin;
@@ -112,10 +164,11 @@ button:hover {
   font-weight: 500px;
 }
 
-.startMenu p {
+.startMenu ul {
   color: #FFD166;
   font-size: 35px;
   font-weight: 600;
+  list-style-type: none;
 }  
 
 #triviaHead {
