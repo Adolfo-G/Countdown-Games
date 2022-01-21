@@ -15,9 +15,36 @@ body {
   font-size: 25px;
   }
 
-.start, .scores, 
+button {
+  background: #ffffff;
+  border: thin;
+  color: #073B4C;
+  font-weight: 600;
+  font-size: 30px;
+  padding: 15px 30px;
+  margin: 8px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  box-shadow: 0px 1px 5px 1px;
+  cursor: pointer;
+  transition: all .2s ease-out;
+}
+
+button:active {
+  box-shadow: 0px 4px 10px #ffffff;
+  background-color: #EF476F;
+}
+
+button:hover {
+  box-shadow: 0px 4px 10px #ffffff;
+  background-color: #EF476F;
+}
+
+.startMenu, .scores, 
 .scoreboard, .triviaGame, .triviaHead {
   background-image: url(../img/AdobeStock_469248894.JPEG);
+  background-size: auto;
+  background-repeat: no-repeat;
   border-radius: 10px;
   border-style: dotted;
   border-width: thick;
@@ -25,6 +52,39 @@ body {
   box-shadow: 0px 0px 5px #ffffff;
   width: 850px;
   margin-top: 5%;
+}
+
+#triviaHeadS {
+  color: #EF476F;
+  font-family: 'Mochiy Pop P One';
+  font-size: 30px;
+  margin-top: 30px;
+}
+
+#triviaHeadT {
+  color: #EF476F;
+  font-family: 'Mochiy Pop P One';
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+#triviaHeadImg {
+  height: 175px;
+  width: 250px;
+  border-radius: 10px;
+  margin-left: 550px;
+  margin-top: -145px;
+}
+
+#menuImg {
+  min-height: 300px;
+  width: 300px;
+  border-radius: 10px;
+  margin: 5% auto 5% auto;
+  border:thin;
+  border-color: #ffffff;
+  border-style: dotted;
+  box-shadow: 0px 0px 5px #ffffff;
 }
 
 .triviaQuestions{
@@ -52,23 +112,11 @@ body {
   font-weight: 500px;
 }
 
-.start p {
+.startMenu p {
   color: #FFD166;
   font-size: 35px;
   font-weight: 600;
 }  
-
-
-.scoreboard h1 {
-  color: #EF476F;
-  margin-top: 5%;
-}
-
-.scoreboard ol {
-  color: #EF476F;
-  font-size: 20px;
-  font-weight: 700;
-}
 
 #triviaHead {
   color: #EF476F;
@@ -78,43 +126,19 @@ body {
   margin-top: 10px;
 }
 
-button {
-  background: #ffffff;
-  border: thin;
-  color: #073B4C;
-  font-weight: 600;
-  font-size: 30px;
-  padding: 15px 30px;
-  margin: 8px;
+#scoreboardHeader {
+  color: #EF476F;
+  font-family: 'Mochiy Pop P One';
+  font-size: 60px;
   border-radius: 10px;
-  text-transform: uppercase;
-  box-shadow: 0px 1px 5px 1px;
-  cursor: pointer;
-  transition: all .2s ease-out;
-}
+  box-shadow: 0px 0px 5px #ffffff;
+  margin: 15px;
 
-button:hover {
-  box-shadow: 0px 4px 10px 4px;
-  background-color: #FFD166;
-}
-
-button:active {
-  box-shadow: 0px 4px 10px 4px;
-  background-color: #FFD166;
 }
 
 .scoreboard-li{
   list-style-type: none;
-}
-
-#menuImg {
-  min-height: 300px;
-  width: 300px;
-  border-radius: 10px;
-  margin: 5% auto 5% auto;
-  border:thin;
-  border-color: #ffffff;
-  border-style: dotted;
-  box-shadow: 0px 0px 5px #ffffff;
-
+  font-family: 'Mochiy Pop P One';
+  font-size: 30px !important;
+  color: #EF476F;
 }

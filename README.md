@@ -4,7 +4,7 @@
 
 
 ## Project Description: 
-- Timer (Countdown) based game application featuring Guess Who and Hangman. This application will utilize the following technologies
+- Timer (Countdown) based game application featuring Trivia and Hangman. This application will utilize the following technologies
 
 - HTML
 - CSS
@@ -53,13 +53,13 @@
 - THEN the game is ended
 
 ## API Used:
-- PokeAPI
-- Font Awesome APIs *
-- Google Fonts API *
-- Google Translation API *
+- 
+-
+- Font Awesome APIs 
+- Google Fonts API 
 
 ## Task Breakdown:
-- Bowen: HTML / JS
+- Bowen: HTML / CSS
 - Adolfo: Images / JS
 - Maria: CSS / JS
 - Caprice: API  /JS
