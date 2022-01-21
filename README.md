@@ -1,10 +1,10 @@
 # Team Swift Wolves
 
-# Project Title: Countdown: Pokemon Edition.
+# Project Title: Coundown Games
 
 
 ## Project Description: 
-- Timer (Countdown) based game application featuring Guess Who and Hangman. This application will feature 151 Pokemon characters and utilize the following technologies
+- Timer (Countdown) based game application featuring Guess Who and Hangman. This application will utilize the following technologies
 
 - HTML
 - CSS
