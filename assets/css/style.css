@@ -1,11 +1,11 @@
 a {
-  color: #EF476F;
+  color: #073B4C;
   text-decoration: none;
   transition: color 0.1s;
 }
 
 body {
-  background-image: url(/Users/bowenz/Desktop/swift-wolves/assets/img/AdobeStock_253986268.JPEG);
+  background-image: url(../img/AdobeStock_253986268.JPEG);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -17,8 +17,7 @@ body {
 
 .start, .scores, 
 .scoreboard, .triviaGame, .triviaHead {
-  background-image: url(/Users/bowenz/Desktop/swift-wolves/assets/img/AdobeStock_469248894.JPEG);
-  background-color: #118AB2;
+  background-image: url(../img/AdobeStock_469248894.JPEG);
   border-radius: 10px;
   border-style: dotted;
   border-width: thick;
@@ -62,6 +61,7 @@ body {
 
 .scoreboard h1 {
   color: #EF476F;
+  margin-top: 5%;
 }
 
 .scoreboard ol {
@@ -95,12 +95,12 @@ button {
 
 button:hover {
   box-shadow: 0px 4px 10px 4px;
-  background-color: #EF476F;
+  background-color: #FFD166;
 }
 
 button:active {
   box-shadow: 0px 4px 10px 4px;
-  background-color: #EF476F;
+  background-color: #FFD166;
 }
 
 .scoreboard-li{
