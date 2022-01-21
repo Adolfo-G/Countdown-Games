@@ -12,27 +12,24 @@
 
 <body>
     <div class="row"> 
-    <a href="index.html"><button>Back to Menu</button></a>
-    <h1 class=" text-center title">Hangman</h1>
-        <h3>Timer: <span id="timer"></span></h3>
-        <div class="columns small-12 small-centered text-center box">
-            <h2 class="info">Letter guessed: <span id="letterGuessed"></span> </h2>
-            <h3 class="info" id="answer"></h3>
-        </div>
-        
-        <div>
-            <div class="columns small-12 small-centered text-center box">
-                <h3 class="info">Lives:<span id="tries">9</span></h3>
+        <div class="columns small-12 small-centered text-center hangmanGame">
+            <h1 class=" text-center hangmanTitle">Hangman</h1>
+            <h3 class="timerBox"><i class="far fa-bell"></i> Timer: <span id="timer"></span></h3>
+
+            <div class="columns small-12 small-centered text-center guessBox">
+                <h3 class="info">Letter guessed: <span id="letterGuessed"></span> </h3>
+                <h3 class="info" id="answer"></h3>
             </div>
             
-            <div>
-                <div class="columns small-12 small-centered text-center scoreBox">
-                    <h4 class="info">Lives:<span id="tries">9</span></h4>
-                    <h4 class="info">Win:<span id="win">0</span>&emsp;&emsp;Loss: <span id="loss">0</span> </h4>
-                </div>
+            <div class="scoreBox">
+                    <div class="columns small-12 small-centered text-center">
+                        <h4 class="info"><i class="fas fa-heart"></i> Lives:<span id="tries">9</span></h4>
+                        <h4 class="info"><i class="fas fa-grin-stars"></i> Win: <span id="win">0</span>&emsp;&emsp;<i class="fas fa-grimace"></i> Loss: <span id="loss">0</span></h4>
+                    </div>
             </div> 
-            <button id="scoreboard"><i class="fas fa-star"></i> Scoreboard</button>
-            <a href="index.html"><button><i class="fas fa-undo-alt"></i> Retry</button></a>
+
+                <button id="scoreboard"><i class="fas fa-star"></i> Scoreboard</button>
+                <a href="index.html"><button><i class="fas fa-undo-alt"></i> Retry</button></a>
         </div>
     </div>
 

@@ -9,7 +9,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  margin: 2% auto auto auto;
+  margin: auto;
   width: 50%;
   font-family: 'Dongle', sans-serif;
   font-size: 25px;
@@ -48,9 +48,10 @@ button:hover {
   border-style: dotted;
   border-width: thick;
   border-color: #ffffff;
-  box-shadow: 0px 0px 5px #ffffff;
+  box-shadow: 1px 1px 5px #ffffff;
   width: 850px;
-  margin: 50px auto auto auto;
+  margin: 10% auto auto auto;
+
 }
 
 .scores {
@@ -133,10 +134,7 @@ button:hover {
   width: 375px;
   border-radius: 10px;
   margin: 5% auto 5% auto;
-  border:thin;
-  border-color: #ffffff;
-  border-style: dotted;
-  box-shadow: 0px 0px 5px #ffffff;
+  box-shadow: 1px 1px 5px #ffffff;
 }
 
 .triviaQuestions{
@@ -183,8 +181,6 @@ button:hover {
   color: #EF476F;
   font-family: 'Mochiy Pop P One';
   font-size: 60px;
-  border-radius: 10px;
-  box-shadow: 0px 0px 5px #ffffff;
   margin: 15px;
 
 }
