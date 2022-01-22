@@ -39,7 +39,7 @@ button:hover {
 }
 
 .backgroundImg {
-  background-size: 2300px 1500px;
+  background-size: 100%;
   background-repeat: no-repeat;
   background-position: center;
   margin: auto;
@@ -56,7 +56,7 @@ button:hover {
   border-width: thick;
   border-color: #ffffff;
   box-shadow: 1px 1px 5px #ffffff;
-  width: 850px;
+  width: 80%;
   margin: 8% auto auto auto;
 
 }
@@ -70,7 +70,7 @@ button:hover {
   border-width: thick;
   border-color: #ffffff;
   box-shadow: 0px 0px 5px #ffffff;
-  width: 850px;
+  width: 80%;
   margin: 2% auto 10% auto;
 }
 
@@ -83,8 +83,8 @@ button:hover {
   border-width: thick;
   border-color: #ffffff;
   box-shadow: 0px 0px 5px #ffffff;
-  width: 850px;
-  margin: 35%;
+  width: 80%;
+  margin: 30% auto 30% auto;
 }
 
 .triviaHead {
@@ -96,7 +96,7 @@ button:hover {
   border-width: thick;
   border-color: #ffffff;
   box-shadow: 0px 0px 5px #ffffff;
-  width: 850px;
+  width: 80%;
   margin: 25% auto auto auto;
 }
 
@@ -109,7 +109,7 @@ button:hover {
   border-width: thick;
   border-color: #ffffff;
   box-shadow: 0px 0px 5px #ffffff;
-  width: 850px;
+  width: 80%;
   margin: 1% auto 25% auto;
 }
 
