@@ -2,21 +2,16 @@ var easyEl=document.querySelector("#easy")
 var normEl=document.querySelector("#normal")
 var hardEl=document.querySelector("#hard")
 var playEl=document.querySelector("#play")
-
-
 easyEl.addEventListener("click",selected)
 normEl.addEventListener("click",selected)
 hardEl.addEventListener("click",selected)
 playEl.addEventListener("click",startGame)
-
-
 function selected(){
     easyEl.value=""
     normEl.value=""
     hardEl.value=""
     this.value=this.innerHTML
 }
-
 function startGame(){
     function modeCheck(){
         var mode=""

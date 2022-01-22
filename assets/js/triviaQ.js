@@ -13,7 +13,6 @@ var score = 0
 var questionNumber = 0
 var totalQuestions = 5
 var seconds=20
-
 function getDifficulty(){
     var queryString = document.location.search;
     var difficulty = queryString.split('=')[1];
@@ -26,18 +25,15 @@ function getDifficulty(){
             return response.json()
         })
         .then(function (data) {
-                console.log(data)
                 apiData=data
-                pick4names(data)
+                pick4(data)
         })   
 }
-
-function pick4names(data) {
+function pick4(data) {
     apiDataResults=data.results[questionNumber]
     var answerChoices=[]
     var correctAnswers= apiDataResults.correct_answer
     answer=correctAnswers
-    console.log(answer)
     
     answerChoices.push(correctAnswers)
     for (var i = 0; i < 3; i++) {
@@ -49,9 +45,7 @@ function pick4names(data) {
     assignButtonNames(mix(answerChoices))
     assignBtnListeners()
 }
-
 function mix(answerChoices){
-    console.log(answerChoices)
     var choices=answerChoices
     var mixedChoices=[]
     for (var j = 0; j < 4; j++) {
@@ -62,22 +56,18 @@ function mix(answerChoices){
         }
         mixedChoices.push(answerChoice)
     }
-    console.log(mixedChoices)
     return mixedChoices
 }
-
 function question(data) {
     quizQuestion=data.question
     quizQuestionEl.innerHTML=quizQuestion
 }
-
 function assignButtonNames(arr) {
     ansBtn1.innerHTML = arr[0]
     ansBtn2.innerHTML = arr[1]
     ansBtn3.innerHTML = arr[2]
     ansBtn4.innerHTML = arr[3]
 }
-
 function assignBtnListeners() {
     ansBtn1.addEventListener("click", checkIfCorrect)
     ansBtn2.addEventListener("click", checkIfCorrect)
@@ -85,7 +75,6 @@ function assignBtnListeners() {
     ansBtn4.addEventListener("click", checkIfCorrect)
 }
 function checkIfCorrect() {
-    console.log(this.innerHTML)
     if (this.innerHTML == answer) {
         score ++
         scoreEl.textContent = score
@@ -95,11 +84,9 @@ function checkIfCorrect() {
     nextQ()
 }
 function nextQ(){
-    console.log(questionNumber, totalQuestions)
     if(questionNumber<totalQuestions){
-        return pick4names(apiData)
+        return pick4(apiData)
     }else{
-        console.log("score:"+score)
         var newPage=`hangman.html?score=${score}`
         document.location.replace(newPage)
     }
@@ -113,7 +100,7 @@ function timer(){
             seconds=20
             questionNumber++
             if(questionNumber<totalQuestions){
-                pick4names(apiData)
+                pick4(apiData)
             }else{
                 clearInterval(countdown)
                 var newPage=`hangman.html?score=${score}`
@@ -122,6 +109,5 @@ function timer(){
         }
     }
 }
-
 getDifficulty()
 timer()
