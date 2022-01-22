@@ -5,7 +5,6 @@
 
 ## Project Description: 
 - Timer (Countdown) based game application featuring Trivia and Hangman. This application will utilize the following technologies
-
 - HTML
 - CSS
 - JavaScript
@@ -15,46 +14,26 @@
 ## User Story
 
 
-- GIVEN a game interface using the pokeAPI
-- WHEN I launch the application
-- THEN I an presented with a brief description of the game and an option to start and option to select difficulty level (1,2,3)
+- Given a game interface using multiple APIs
+- When I launch the application
+- Then I am presented with difficulty level options and brief description of the games
 
-- WHEN I start the game
-- THEN I am presented with a silhouette  of a Pokemon and four answer choices
+- When I start the game
+- Then I am presented with series of trivia questions and four answers 
 
-- WHEN I am playing the game
-- THEN I will see a counter showing how many answers I have got correct
+- When the Trivia challenge timer is complete
+- Then I will be directed to the next countdown game (Hangman)
 
-- WHEN I choose between 1 of 4 answer choices regardless if correct or not
-- THEN I am given a new set of question with 4 new answer choices
+- When I press any letter 
+- Then the game will notify me If I guessed correctly or not
 
-- WHEN I am playing the game
-- THEN a 10 second timer will display and count down
+- When the timer is complete
+- Then I will be presented with the scores
 
-- WHEN there are no more questions (Number of questions will vary depending on difficulty level)
-- THEN I am directed to a mini game of Hangman
-
-- WHEN the Hangman portion of the game begins
-- THEN a 30 second timer will display and count down
-
-- WHEN I select letters for the hangman game
-- THEN letters are either shown or not shown in the word answer
-
-- WHEN the word is complete or there are no attempts left
-- THEN I am brought to a new screen to input my user name
-
-- WHEN I submit my user name
-- THEN I am able to see a list of high-scores with the option to restart or exit the game
-
-- WHEN I press restart
-- THEN the game is restarted with all values reset
-
-- WHEN I press exit
-- THEN the game is ended
 
 ## API Used:
-- 
--
+- Random Words
+- Open Trivia Database
 - Font Awesome APIs 
 - Google Fonts API 
 
@@ -65,6 +44,9 @@
 - Caprice: API  /JS
 
 ## Wireframe: 
-
+![](/assets/img/HomePage.png)
+![](/assets/img/TriviaChallenge.png)
+![](/assets/img/Hangman.png)
+![](/assets/img/Scoreboard.png)
 
 ## Deployment
