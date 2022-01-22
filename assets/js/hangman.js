@@ -8,9 +8,6 @@ var finalword = ""
 var answer = []
 var count = 45
 var lives = 9
-
-
-
 scoreboardBtnEl.addEventListener("click", scoreboardPage)
 function scoreboardPage() {
 	score=score*100
@@ -21,7 +18,6 @@ function scoreboardPage() {
 	var newPage = "highscores.html?score=" + score
 	document.location.replace(newPage)
 }
-
 fetch("https://random-words5.p.rapidapi.com/getMultipleRandom?count=5", {
 	"method": "GET",
 	"headers": {
@@ -32,20 +28,14 @@ fetch("https://random-words5.p.rapidapi.com/getMultipleRandom?count=5", {
 	.then(response => {
 		return response.json()
 	})
-	.catch(err => {
-		console.error(err);
-	})
 	.then(function (data) {
 		var stop = false
 		var int=1
 		finalword = data[0]
-		console.log(finalword)
-
 		function keyup(event) {
 			var key = document.querySelector("#letterGuessed")
 			var keyPressed = event.key
 			key.textContent = keyPressed
-
 			function matcher() {
 				if (finalword.includes(keyPressed)) {
 					for (var i = 0; i < finalword.length; i++) {
@@ -71,15 +61,15 @@ fetch("https://random-words5.p.rapidapi.com/getMultipleRandom?count=5", {
 			winRules()
 			if(stop===false){
 				matcher()
+			}else{
+				livesEl.textContent=0
 			}
 		}
-
 		function wordSelector() {
 			for (var i = 0; i < finalword.length; i++) {
 				answer[i] = "_ "
 			}
 		}
-
 		function setTime() {
 			var timerInterval = setInterval(function () {
 				count-=int
