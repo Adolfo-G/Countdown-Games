@@ -65,8 +65,6 @@ body {
   background: cadetblue;
   border-radius: 10px;
   box-shadow: 0px 0px 5px darksalmon;
-  padding: 10px;
-  margin: 20px;
   font-family: 'Dongle', sans-serif;
   font-size: 55px;
 }
@@ -75,10 +73,7 @@ body {
   background: cadetblue;
   border-radius: 10px;
   box-shadow: 0px 0px 5px darksalmon;
-  padding: 10px;
-  margin: 20px !important;
-  max-width: 880px;
-
+  margin-top: 2%;
 }
 
 .guessBox h3 {
@@ -91,8 +86,6 @@ body {
   background: cadetblue;
   border-radius: 10px;
   box-shadow: 0px 0px 5px darksalmon;
-  padding: 10px;
-  margin: 20px;
 }
 
 .scoreBox h4 {
