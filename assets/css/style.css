@@ -5,14 +5,12 @@ a {
 }
 
 body {
-  background-image: url(../img/AdobeStock_253986268.JPEG);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
   margin: auto;
-  width: 50%;
+  width: auto;
+  height: auto;
   font-family: 'Dongle', sans-serif;
   font-size: 25px;
+  background-color: #000000;
   }
 
 button {
@@ -40,6 +38,15 @@ button:hover {
   background-color: #EF476F;
 }
 
+.backgroundImg {
+  background-size: 2300px 1500px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: auto;
+  width: auto;
+  height: auto;
+}
+
 .startMenu {
   background-image: url(../img/AdobeStock_469248894.JPEG);
   background-size: auto;
@@ -50,7 +57,7 @@ button:hover {
   border-color: #ffffff;
   box-shadow: 1px 1px 5px #ffffff;
   width: 850px;
-  margin: 10% auto auto auto;
+  margin: 8% auto auto auto;
 
 }
 
@@ -64,7 +71,7 @@ button:hover {
   border-color: #ffffff;
   box-shadow: 0px 0px 5px #ffffff;
   width: 850px;
-  margin: 20px auto auto auto;
+  margin: 2% auto 10% auto;
 }
 
 .scoreboard {
@@ -77,7 +84,7 @@ button:hover {
   border-color: #ffffff;
   box-shadow: 0px 0px 5px #ffffff;
   width: 850px;
-  margin: 200px auto auto auto;
+  margin: 35%;
 }
 
 .triviaHead {
@@ -90,7 +97,7 @@ button:hover {
   border-color: #ffffff;
   box-shadow: 0px 0px 5px #ffffff;
   width: 850px;
-  margin: 200px auto auto auto;
+  margin: 25% auto auto auto;
 }
 
 .triviaGame {
@@ -103,7 +110,7 @@ button:hover {
   border-color: #ffffff;
   box-shadow: 0px 0px 5px #ffffff;
   width: 850px;
-  margin: 20px auto auto auto;
+  margin: 1% auto 25% auto;
 }
 
 

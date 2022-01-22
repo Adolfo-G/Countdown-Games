@@ -20,13 +20,22 @@ button:hover {
 }
 
 body {
-  background-image: url(../img/AdobeStock_253986268.JPEG);
-  background-size: cover;
+  margin: auto;
+  width: auto;
+  height: auto;
+  font-family: 'Dongle', sans-serif;
+  font-size: 25px;
+  background-color: #000000;
+  }
+
+.backgroundImg {
+  background-size: 2300px 1500px;
   background-repeat: no-repeat;
   background-position: center;
   margin: auto;
-  width: 50%;
-  }
+  width: auto;
+  height: auto;
+}
 
 .hangmanGame {
   background-image: url(../img/AdobeStock_469248894.JPEG);
@@ -38,7 +47,7 @@ body {
   border-color: #ffffff;
   box-shadow: 0px 0px 5px #ffffff;
   width: 850px;
-  margin: 10% auto auto auto;
+  margin: 10% auto 10% auto;
 }
 
 .hangmanTitle{
