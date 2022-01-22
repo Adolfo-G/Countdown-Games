@@ -32,16 +32,16 @@
 
 
 ## API Used:
-- Random Words
-- Open Trivia Database
-- Font Awesome APIs 
+- Random Words API
+- Open Trivia Database API
+- Font Awesome API
 - Google Fonts API 
 
 ## Task Breakdown:
 - Bowen: HTML / CSS
-- Adolfo: Images / JS
-- Maria: CSS / JS
-- Caprice: API  /JS
+- Adolfo: APIs / JS
+- Maria: APIs / PowerPoint 
+- Caprice: HTML /PowerPoint 
 
 ## Wireframe: 
 ![](/assets/img/HomePage.png)
