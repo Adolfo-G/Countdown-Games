@@ -1,6 +1,6 @@
 # Team Swift Wolves
 
-# Project Title: Coundown Games
+# Project Title: Countdown Games
 
 
 ## Project Description: 
@@ -50,4 +50,4 @@
 ![](/assets/img/Scoreboard.png)
 
 ## Deployment
-https://adolfo-g.github.io/swift-wolves/
+https://adolfo-g.github.io/Countdown-Games/
